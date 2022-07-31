@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learning_on_demands",
+  "info": {
+    "singularName": "learning-on-demand",
+    "pluralName": "learning-on-demands",
+    "displayName": "LearningOnDemand",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Module": {
+      "type": "enumeration",
+      "enum": [
+        "Legal Series",
+        "Clinic Series",
+        "Vendor Series",
+        "Sales Series",
+        "Tech Series"
+      ]
+    },
+    "InitiatedBy": {
+      "type": "enumeration",
+      "enum": [
+        "AAG",
+        "OTT",
+        "Others"
+      ]
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    },
+    "Password": {
+      "type": "string"
+    },
+    "ResourceURL": {
+      "type": "string",
+      "required": true
+    },
+    "FB_URL": {
+      "type": "string",
+      "required": true
+    },
+    "EDM": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "RecordingDate": {
+      "type": "date"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "Speaker": {
+      "type": "string"
+    },
+    "BannedUsers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "likes.liked-by"
+    }
+  }
+}

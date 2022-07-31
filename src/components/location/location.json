@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_location_locations",
+  "info": {
+    "displayName": "location",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "string"
+    },
+    "long": {
+      "type": "string"
+    }
+  }
+}

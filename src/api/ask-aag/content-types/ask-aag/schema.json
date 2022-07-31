@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ask_aags",
+  "info": {
+    "singularName": "ask-aag",
+    "pluralName": "ask-aags",
+    "displayName": "AskAAG",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PostTitle": {
+      "type": "string"
+    },
+    "PostBy": {
+      "type": "string"
+    },
+    "PostText": {
+      "type": "text"
+    },
+    "Pin": {
+      "type": "boolean",
+      "default": false
+    },
+    "PostChannel": {
+      "type": "enumeration",
+      "enum": [
+        "Legal",
+        "Tech",
+        "HDB",
+        "Commercial",
+        "Industrial",
+        "Landed",
+        "New Launch",
+        "Resale Condo",
+        "GarageSale",
+        "Repairs",
+        "Leasing",
+        "Others"
+      ]
+    },
+    "PostSubType": {
+      "type": "string"
+    },
+    "PostType": {
+      "type": "enumeration",
+      "enum": [
+        "Question",
+        "Comment",
+        "Help",
+        "Recommendation",
+        "Announcement",
+        "ChitChat",
+        "General",
+        "Others"
+      ]
+    },
+    "Reply_aags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reply-aag.reply-aag",
+      "mappedBy": "Ask_aag"
+    }
+  }
+}

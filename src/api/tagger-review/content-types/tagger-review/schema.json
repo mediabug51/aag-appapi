@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tagger_reviews",
+  "info": {
+    "singularName": "tagger-review",
+    "pluralName": "tagger-reviews",
+    "displayName": "TaggerReview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 0,
+      "required": true
+    },
+    "Comment": {
+      "type": "string"
+    },
+    "Reviewer": {
+      "type": "string"
+    },
+    "Ott_project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ott-project.ott-project"
+    },
+    "Project_tagger": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-tagger.project-tagger",
+      "inversedBy": "Tagger_reviews"
+    }
+  }
+}

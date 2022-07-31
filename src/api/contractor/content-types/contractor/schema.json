@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contractors",
+  "info": {
+    "singularName": "contractor",
+    "pluralName": "contractors",
+    "displayName": "Contractor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ServiceTitle": {
+      "type": "string"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "Name1": {
+      "type": "string"
+    },
+    "Name2": {
+      "type": "string"
+    },
+    "Name3": {
+      "type": "string"
+    },
+    "Contact1": {
+      "type": "string"
+    },
+    "Contact2": {
+      "type": "string"
+    },
+    "Contact3": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Preferred": {
+      "type": "boolean",
+      "default": false
+    },
+    "Remarks": {
+      "type": "text"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Lawyers",
+        "Bankers",
+        "Handyman",
+        "Cleaners",
+        "Aircon",
+        "Servicing",
+        "Plumbers",
+        "Movers",
+        "Installation_&_Repairs",
+        "Furnishing_&_Renovation",
+        "Others"
+      ]
+    },
+    "Ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contractor-rating.contractor-rating",
+      "mappedBy": "Contractor"
+    }
+  }
+}

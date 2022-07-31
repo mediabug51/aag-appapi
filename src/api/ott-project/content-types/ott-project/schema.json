@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ott_projects",
+  "info": {
+    "singularName": "ott-project",
+    "pluralName": "ott-projects",
+    "displayName": "OTT_Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjName": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "ProjectIC": {
+      "type": "string"
+    },
+    "BrochureUrl": {
+      "type": "string"
+    },
+    "ResourceUrl": {
+      "type": "string"
+    },
+    "Comm": {
+      "type": "string"
+    },
+    "ShowflatAddress": {
+      "type": "text"
+    },
+    "ShowflatLocation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "AddressLocation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "District": {
+      "type": "enumeration",
+      "enum": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18",
+        "D19",
+        "D20",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27",
+        "D28"
+      ]
+    },
+    "project_taggers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-tagger.project-tagger",
+      "mappedBy": "ott_projects"
+    }
+  }
+}

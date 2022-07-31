@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_likes_liked_bies",
+  "info": {
+    "displayName": "LikedBy",
+    "icon": "dove"
+  },
+  "options": {},
+  "attributes": {
+    "UserId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_calendars",
+  "info": {
+    "singularName": "training-calendar",
+    "pluralName": "training-calendars",
+    "displayName": "TrainingCalendar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Training",
+        "Event",
+        "Activity",
+        "Meeting",
+        "Others"
+      ],
+      "required": true
+    },
+    "Venue": {
+      "type": "enumeration",
+      "enum": [
+        "A-Space",
+        "OTT Building",
+        "Zoom",
+        "To Be Adviced"
+      ],
+      "required": true
+    },
+    "EDM": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Speaker": {
+      "type": "string"
+    },
+    "SignUpLink": {
+      "type": "string"
+    },
+    "PromoLink": {
+      "type": "string"
+    },
+    "Target_audiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::target-audience.target-audience"
+    },
+    "NotifyBy": {
+      "type": "enumeration",
+      "enum": [
+        "Email and WhatsApp",
+        "Email Only",
+        "WhatsApp Only",
+        "Push Only",
+        "All"
+      ]
+    },
+    "NotifyWhen": {
+      "type": "enumeration",
+      "enum": [
+        "Immediate",
+        "Tomorrow",
+        "One Day Before",
+        "Three Days Before",
+        "Seven Days Before"
+      ]
+    },
+    "ReminderNotify": {
+      "type": "enumeration",
+      "enum": [
+        "One Day Before",
+        "Two Days Before",
+        "Three Hrs Before"
+      ]
+    },
+    "UpdatedBy": {
+      "type": "string"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "MaxCapacity": {
+      "type": "integer"
+    }
+  }
+}

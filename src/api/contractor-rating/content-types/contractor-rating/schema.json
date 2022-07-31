@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contractor_ratings",
+  "info": {
+    "singularName": "contractor-rating",
+    "pluralName": "contractor-ratings",
+    "displayName": "ContractorReview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 0,
+      "required": true
+    },
+    "Comment": {
+      "type": "text",
+      "required": true
+    },
+    "Contractor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contractor.contractor",
+      "inversedBy": "Ratings"
+    },
+    "Reviewer": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_clippings",
+  "info": {
+    "singularName": "news-clipping",
+    "pluralName": "news-clippings",
+    "displayName": "NewsClipping"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Category1",
+        "Category2"
+      ]
+    },
+    "ForBuyersTenant": {
+      "type": "boolean",
+      "default": false
+    },
+    "ForSellersLandlord": {
+      "type": "boolean",
+      "default": false
+    },
+    "Images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "RelatedLocation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "RelatedLocation2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "RelatedLocation3": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Note": {
+      "type": "text"
+    }
+  }
+}

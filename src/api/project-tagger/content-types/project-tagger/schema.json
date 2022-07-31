@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_taggers",
+  "info": {
+    "singularName": "project-tagger",
+    "pluralName": "project-taggers",
+    "displayName": "ProjectTagger",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "AgentId": {
+      "type": "string"
+    },
+    "CEA": {
+      "type": "string"
+    },
+    "Contact": {
+      "type": "string"
+    },
+    "ott_projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ott-project.ott-project",
+      "inversedBy": "project_taggers"
+    },
+    "Note": {
+      "type": "text"
+    },
+    "Tagger_reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tagger-review.tagger-review",
+      "mappedBy": "Project_tagger"
+    }
+  }
+}

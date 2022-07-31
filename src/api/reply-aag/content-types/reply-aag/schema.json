@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reply_aags",
+  "info": {
+    "singularName": "reply-aag",
+    "pluralName": "reply-aags",
+    "displayName": "ReplyAAG"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ask_aag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ask-aag.ask-aag",
+      "inversedBy": "Reply_aags"
+    },
+    "Comment": {
+      "type": "text"
+    },
+    "Commenter": {
+      "type": "string"
+    },
+    "LikedBy": {
+      "displayName": "LikedBy",
+      "type": "component",
+      "repeatable": true,
+      "component": "likes.liked-by"
+    }
+  }
+}

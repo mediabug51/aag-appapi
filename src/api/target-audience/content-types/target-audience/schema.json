@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "target_audiences",
+  "info": {
+    "singularName": "target-audience",
+    "pluralName": "target-audiences",
+    "displayName": "TargetAudience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Rookie",
+        "Agents",
+        "Senior Agents",
+        "Leaders",
+        "Senior_Leaders",
+        "Heads"
+      ]
+    },
+    "Branch": {
+      "type": "string"
+    }
+  }
+}

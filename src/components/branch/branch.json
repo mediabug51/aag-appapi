@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_branch_branches",
+  "info": {
+    "displayName": "Branch"
+  },
+  "options": {},
+  "attributes": {
+    "naame": {
+      "type": "string"
+    }
+  }
+}
