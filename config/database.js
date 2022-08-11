@@ -1,5 +1,5 @@
 const path = require('path');
-const parse= require('pg-connection-string')
+const parse= require('pg-connection-string').parse
 const config=parse(process.env.DATABASE_URL)
 console.log(config)
 module.exports = ({ env }) => ({
