@@ -1,6 +1,6 @@
 const path = require('path');
 const parse= require('pg-connection-string')
-const config=parse(process.env.DATABASE_UR)
+const config=parse(process.env.DATABASE_URL)
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
